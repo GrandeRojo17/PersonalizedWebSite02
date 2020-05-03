@@ -4,12 +4,18 @@
 }
 :root {
   --modal-duration: 1s;
-  --primary-color: #30336b;
-  --secondary-color: #be2edd;
+  --primary-color: #38183a;
+  --secondary-color: #feabae;
+  --thirdChoice-color: #ffc9b5;
+  --fourthChoice-color: #c7e8f3;
 }
 body {
   font-family: "Walter+Turncoat", sans-serif;
   margin: 0;
+  transition: transform 0.5s ease-in-out;
+}
+body.show-nav {
+  transform: translate(256px);
 }
 /* nav img{
     width: 105px;
@@ -17,14 +23,16 @@ body {
 nav {
   background-color: var(--primary-color);
   border-right: 2px solid rgba(200, 200, 200, 0.1);
-
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 256px;
   height: 100vh;
   z-index: 100;
   transform: translateX(-100%);
+}
+nav h2 {
+  color: aliceblue;
 }
 nav .logo {
   padding: 30px;
@@ -36,8 +44,8 @@ nav ul {
   margin: 0;
 }
 nav .logo img {
-  height: 175px;
-  height: 100px;
+  height: 200px;
+
   border-radius: 25%;
 }
 nav ul li {
@@ -54,22 +62,141 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
+.notification-container {
+  background-color: rgba(100, 100, 200, 0.3);
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  top: -50px;
+
+  transition: transform 0.5 ease-in-out;
+}
+/* .notification-container p {
+  background-attachment: fixed;
+   margin: 0; 
+} */
+.notification-container.show {
+  transform: translateY(50px);
+}
+
 header {
-  background-color: var(--primary-color) color#fff;
+  background-color: var(--secondary-color);
   font-size: 130%;
   position: relative;
   padding: 40px 15px;
   text-align: center;
+  height: 233px;
 }
-header h1{
-    margin:0;
+header h1 {
+  color: var(--primary-color);
+  margin: 0;
 }
-header p{
-    margin:30px 0;
+header p {
+  color: rgb(155, 87, 87);
+  margin: 5px 0;
 }
-button,input[type='submit']{
-    background-color: var(--secondary-color);
-    border:0;
-    border-radius: 5px;
-    color: #fff
+button,
+input[type="submit"] {
+  /*this is the contact me button*/
+  background-color: black;
+  border: 0;
+  border-radius: 5px;
+  color: rgb(252, 232, 232);
+  cursor: pointer;
+  padding: 8px 12px;
 }
+button:focus {
+  outline: none;
+}
+.toggle {
+  background-color: rgba(100, 100, 200, 0.3);
+  position: absolute;
+  top: 23px;
+  left: 23px;
+}
+.ctn-btn {
+  padding: 12px 20px;
+  font-size: 20px;
+}
+.container h2 {
+  text-align: center;
+}
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 856px;
+}
+.container ul {
+  list-style-type: none;
+  text-align: center;
+}
+.modal-container {
+  display: none;
+  background-color: rgba(200, 200, 200, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.modal-container.show-modal {
+  display: block;
+}
+.modal {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(100, 100, 200, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+.modal-header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+}
+.modal-header h3 {
+  margin: 0;
+  border-bottom: 2px solid #333;
+}
+.modal-content {
+  padding: 20px;
+}
+.modal-form div {
+  margin: 15px 0;
+}
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.modal-form input {
+  background-color: rgba(100, 100, 200, 0.3);
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+.close-btn {
+  background: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 12px;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* This was my first time using modals for my webpage  
+I got to experiment with keyframes and using variables inside of css */
