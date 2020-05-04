@@ -23,7 +23,7 @@ banner.addEventListener("click", () => {
 
 function showNotification() {
   notification.classList.add("show");
-  setTimeout(() => {
+  setTimeout( () => {
     notification.classList.remove("show");
   });
 }
