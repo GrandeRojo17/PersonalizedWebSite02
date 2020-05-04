@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 :root {
   --modal-duration: 1s;
   --primary-color: #38183a;
   --secondary-color: #b75ff2;
-  --thirdChoice-color: #ffc9b5;
+  --thirdChoice-color: #99f25e;
+  --fifthChoice-color: #f25e99;
   --fourthChoice-color: #c7e8f3;
 }
 body {
@@ -51,11 +54,11 @@ nav .logo img {
 }
 nav ul li {
   text-align: center;
-  border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+  border-bottom: 2px solid rgba(72, 255, 87, 0.1);
   padding: 20px;
 }
 nav ul li:first-of-type {
-  border-top: 2px solid rgba(200, 200, 200, 0.562);
+  border-top: 2px solid rgba(163, 250, 82, 0.562);
 }
 nav ul li a {
   color: #fff;
@@ -124,11 +127,16 @@ button:focus {
   font-size: 20px;
 }
 
+.full-container {
+  display: flex;
+  justify-content: center;
+}
 .container {
+  border: 1px solid blanchedalmond;
   text-align: center;
   color: rgb(233, 233, 233);
   background-color: rgba(100, 100, 200, 0.3);
-  padding: 15px;
+  padding: 45px;
   max-height: 100%;
   width: 100%;
   max-width: 850px;
@@ -136,6 +144,8 @@ button:focus {
   /* width: 856px; */
 }
 .container h2 {
+  color: chartreuse;
+  background-image: linear-gradient(red yellow);
   text-align: center;
 } /*-----------------------------------Container Link -----------------------*/
 .container a {
@@ -154,7 +164,7 @@ button:focus {
   text-align: center;
 } /* --Modal started Here --*/
 .modal-container {
-  background-color: rgba(200, 200, 200, 0.6);
+  background-color: rgba(243, 252, 238, 0.6);
   display: none;
   position: fixed;
   top: 0;
@@ -168,9 +178,12 @@ button:focus {
 .modal-container a {
   color: rgb(250, 244, 244);
 }
+.modal-container a:hover {
+  color: var(--fifthChoice-color);
+}
 .modal {
-  background-color: rgb(255, 190, 190);
-  border-radius: 15px;
+  background-color: var(--thirdChoice-color);
+  border-radius: 9px;
   box-shadow: 0 0 25px rgba(100, 100, 200, 0.3);
   position: absolute;
   overflow: hidden;
@@ -190,6 +203,9 @@ button:focus {
 .modal-header h3 {
   margin: 0;
   border-bottom: 2px solid #333;
+}
+.modal-content p {
+  text-align: center;
 }
 .modal-content {
   padding: 20px;
