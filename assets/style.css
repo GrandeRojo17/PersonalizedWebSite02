@@ -20,9 +20,7 @@ body.show-nav {
 /* nav img{
     width: 105px;
 } */
-#banner {
-  width: max-content;
-}
+
 nav {
   background-color: var(--primary-color);
   border-right: 2px solid rgba(200, 200, 200, 0.1);
@@ -83,31 +81,34 @@ nav ul li a:hover {
 }
 /* --Banner of page started Here --*/
 header {
+  padding: 75px;
   background-color: var(--secondary-color);
-  font-size: 130%;
+  font-size: 100%;
   position: relative;
   padding: 40px 15px;
   text-align: center;
   height: 233px;
+  width: 100%;
 }
 header h1 {
   color: var(--primary-color);
-  margin: 0;
-  width: 100%vw;
+  /* padding:10px; */
+  /* width: 100%vw; */
 }
 header p {
-  color: #b75ff2;
+  color: #542970;
   margin: 5px 0;
 } /* --Focus on Button started Here --*/
 button,
 input[type="submit"] {
   /*this is the contact me button*/
-  background-color: black;
+  background-color: rgba(54, 54, 129, 0.9);
   border: 0;
   border-radius: 5px;
   color: rgb(252, 232, 232);
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 8px 5px;
+  box-shadow: -1px 1px 20px rgba(38, 38, 117, 0.9);
 }
 button:focus {
   outline: none;
@@ -122,25 +123,39 @@ button:focus {
   padding: 12px 20px;
   font-size: 20px;
 }
-.container h2 {
-  text-align: center;
-}
+
 .container {
-  
+  text-align: center;
+  color: rgb(233, 233, 233);
   background-color: rgba(100, 100, 200, 0.3);
   padding: 15px;
   max-height: 100%;
+  width: 100%;
   max-width: 850px;
-  
+
   /* width: 856px; */
 }
+.container h2 {
+  text-align: center;
+} /*-----------------------------------Container Link -----------------------*/
+.container a {
+  color: #99d1ff;
+}
+.container a:hover {
+  color: rgba(255, 140, 140, 0.6);
+}
+.container a:visited {
+  color: rgb(123, 8, 255);
+}
 .container ul {
+  font-weight: bold;
+  text-shadow: #333;
   list-style-type: none;
   text-align: center;
 } /* --Modal started Here --*/
 .modal-container {
-  display: none;
   background-color: rgba(200, 200, 200, 0.6);
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -150,8 +165,11 @@ button:focus {
 .modal-container.show-modal {
   display: block;
 }
+.modal-container a {
+  color: rgb(250, 244, 244);
+}
 .modal {
-  background-color: #fff;
+  background-color: rgb(255, 190, 190);
   border-radius: 15px;
   box-shadow: 0 0 25px rgba(100, 100, 200, 0.3);
   position: absolute;
@@ -160,7 +178,7 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 100%;
-  width: 400px;
+  width: 445px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
 }
