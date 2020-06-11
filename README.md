@@ -1,6 +1,6 @@
 
 # **PROJECT**: **Portfolio Updated**
-## By: null @ null @GHUB: undefined
+## By: David Y @ null @GHUB: GrandeRojo17
 
 #### Description: <p>I have developed from scratch an interesting portfolio website that defines my current status of coding and was made with 100% passion and used 100% of my current skills to make. I will archive the versions of profile and release them eventually to show a progression.</p>
 #License : MIT
