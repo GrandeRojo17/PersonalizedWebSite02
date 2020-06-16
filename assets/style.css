@@ -6,16 +6,19 @@
 }
 :root {
   --modal-duration: 1s;
-  --primary-color: #d3a4d6;
-  --secondary-color: #d8a1fd;
-  --thirdChoice-color: #79f526;
+  --primary-color: #fc9fff;
+  --secondary-color: #040924;
+  --text-highlight-color: #57e4e9;
   --fifthChoice-color: #f25e99;
   --fourthChoice-color: #c7e8f3;
+  --banner-color: #921919;   /* button color */
+  --accents-color: #7300c0;
 }
 body {
   font-family: "Walter+Turncoat", sans-serif;
   margin: 0;
   transition: transform 0.5s ease-in-out;
+  background-color:var(--secondary-color);
 }
 body.show-nav {
   transform: translate(256px);
@@ -25,7 +28,7 @@ body.show-nav {
 } */
 
 nav {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   border-right: 2px solid rgba(200, 200, 200, 0.1);
   position: fixed;
   top: 0;
@@ -36,7 +39,7 @@ nav {
   transform: translateX(-100%);
 }
 nav h2 {
-  color: aliceblue;
+  color: var(--text-highlight-color);
 }
 nav .logo {
   padding: 15px;
@@ -68,7 +71,7 @@ nav ul li a:hover {
   text-decoration: underline;
 } /* --The pop up buttonHere --*/
 .notification-container {
-  background-color: rgba(100, 100, 200, 0.3);
+  background-color: rgba(128, 128, 134, 0.3);
   border-radius: 0 0 10px 10px;
   position: relative;
   top: -50px;
@@ -85,7 +88,8 @@ nav ul li a:hover {
 /* --Banner of page started Here --*/
 header {
   padding: 75px;
-  background-color: var(--secondary-color);
+  background-color: var(--banner-color);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   font-size: 100%;
   position: relative;
   padding: 40px 15px;
@@ -94,30 +98,32 @@ header {
   width: 100%;
 }
 header h1 {
-  color: var(--primary-color);
+  color: var(--fourthChoice-color);
+  font-size: 300%;
   /* padding:10px; */
   /* width: 100%vw; */
 }
 header p {
-  color: #542970;
+  color: var(--fourthChoice-color);
   margin: 5px 0;
 } /* --Focus on Button started Here --*/
+
 button,
 input[type="submit"] {
   /*this is the contact me button*/
-  background-color: rgba(54, 54, 129, 0.9);
+  background-color: var(--secondary-color);
   border: 0;
   border-radius: 5px;
   color: rgb(252, 232, 232);
   cursor: pointer;
   padding: 8px 5px;
-  box-shadow: -1px 1px 20px rgba(38, 38, 117, 0.9);
+  box-shadow: -1px 1px 20px rgba(126, 126, 126, 0.9);
 }
 button:focus {
   outline: none;
 }
 .toggle {
-  background-color: rgba(100, 100, 200, 0.3);
+  background-color: var(--banner-color);
   position: absolute;
   top: 23px;
   left: 23px;
@@ -130,12 +136,13 @@ button:focus {
 .full-container {
   display: flex;
   justify-content: center;
+  background-color: var(--secondary-color);
 }
 .container {
   border: 1px solid blanchedalmond;
   text-align: center;
   color: rgb(233, 233, 233);
-  background-color: rgba(100, 100, 200, 0.3);
+  background-color: rgba(9, 9, 133, 0.3);
   padding: 45px;
   max-height: 100%;
   width: 100%;
@@ -144,8 +151,8 @@ button:focus {
   /* width: 856px; */
 }
 .container h2 {
-  color: chartreuse;
-  background-image: linear-gradient(red yellow);
+  color: var(--text-highlight-color);
+  
   text-align: center;
 } /*-----------------------------------Container Link -----------------------*/
 .container a {
@@ -164,7 +171,7 @@ button:focus {
   text-align: center;
 } /* --Modal started Here --*/
 .modal-container {
-  background-color: rgba(243, 252, 238, 0.6);
+  background-color: rgba(243, 252, 238, 1);
   display: none;
   position: fixed;
   top: 0;
@@ -184,7 +191,7 @@ button:focus {
 .modal {
   background-color: var(--thirdChoice-color);
   border-radius: 9px;
-  box-shadow: 0 0 25px rgba(100, 100, 200, 0.3);
+  box-shadow: 0 0 25px rgba(100, 100, 200, 0.5);
   position: absolute;
   overflow: hidden;
   top: 50%;
@@ -218,7 +225,7 @@ button:focus {
   margin-bottom: 5px;
 }
 .modal-form input {
-  background-color: rgba(100, 100, 200, 0.3);
+  background-color: rgba(126, 125, 125, 0.8);
 }
 
 .modal-form .form-input {
