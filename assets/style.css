@@ -68,7 +68,7 @@ nav ul li {
   padding: 20px;
 }
 nav ul li:first-of-type {
-  border-top: 2px solid rgba(163, 250, 82, 0.562);
+  border-top: 2px solid var(--text-highlight-color);
 }
 nav ul li a {
   color: #fff;
