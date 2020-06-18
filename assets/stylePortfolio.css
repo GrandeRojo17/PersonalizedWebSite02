@@ -21,9 +21,6 @@ body {
 body.show-nav {
   transform: translate(256px);
 }
-/* nav img{
-    width: 105px;
-} */
 
 nav {
   background-color: var(--primary-color);
@@ -76,13 +73,7 @@ nav ul li a:hover {
 
   transition: transform 0.5 ease-in-out;
 }
-/* .notification-container p {
-  background-attachment: fixed;
-   margin: 0; 
-} */
-/* .notification-container.show {
-  transform: translateY(50px);
-} */
+
 /* --Banner of page started Here --*/
 header {
   padding: 75px;
@@ -96,8 +87,7 @@ header {
 }
 header h1 {
   color: var(--primary-color);
-  /* padding:10px; */
-  /* width: 100%vw; */
+
 }
 header p {
   color: #542970;

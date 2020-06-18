@@ -4,12 +4,12 @@ const open = document.getElementById("open");
 const modal = document.getElementById("modal");
 const notification = document.getElementById("notification-container");
 const banner = document.getElementById("banner");
-var body = document.getElementById("body");
+var boody = document.getElementById("boody");
 
 if (screen.width >= 500) {
-  body.classList.add("show-nav");
+  boody.classList.add("show-nav");
 } else {
-  body.classList.remove("show-nav");
+  boody.classList.remove("show-nav");
 }
 
 //toggle the nav
