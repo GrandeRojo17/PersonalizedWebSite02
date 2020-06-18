@@ -1,9 +1,17 @@
-const toggle = document.getElementById("toggle");
+var toggle = document.getElementById("toggle");
 const close = document.getElementById("close");
 const open = document.getElementById("open");
 const modal = document.getElementById("modal");
 const notification = document.getElementById("notification-container");
 const banner = document.getElementById("banner");
+var body = document.getElementById("body");
+
+if (screen.width >= 500) {
+  body.classList.add("show-nav");
+} else {
+  body.classList.remove("show-nav");
+}
+
 //toggle the nav
 toggle.addEventListener("click", () =>
   document.body.classList.toggle("show-nav")
@@ -29,3 +37,6 @@ function showNotification() {
     notification.classList.remove("show");
   });
 }
+//I want to show the nav on any screen larger than 600px across
+
+//
