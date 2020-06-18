@@ -174,7 +174,7 @@ button:focus {
   color: rgba(255, 140, 140, 0.6);
 }
 .container a:visited {
-  color: rgb(123, 8, 255);
+  color: rgb(12, 8, 255);
 }
 .container ul {
   font-weight: bold;
@@ -221,7 +221,6 @@ button:focus {
 }
 .modal-header h3 {
   margin: 0;
-  border-bottom: 2px solid #333;
 }
 .modal-content p {
   text-align: center;
